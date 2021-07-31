@@ -11,7 +11,8 @@
 
   $message="Hi mukul";
   $number="+917456987158";
-
+  $accessToken="";
+  
   $message = iconv("UTF-8", "ISO-8859-15", $message);
   $fields_string = 'accessToken='.$accessToken.'&message='.urlencode($message).'&numero='.$number;
 
@@ -24,7 +25,7 @@
   echo "<pre>";
   print_r($result);
   die;
-  
+
   curl_close($ch);
   if (!$result) {
       return ERROR_API;
